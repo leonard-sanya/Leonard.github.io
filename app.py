@@ -6,6 +6,7 @@ import base64
 import streamlit as st
 from PIL import Image
 import base64
+from io import BytesIO 
 
 def set_background(image_path):
     with open(image_path, "rb") as image_file:
