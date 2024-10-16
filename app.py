@@ -26,7 +26,7 @@ def home():
     st.title("Welcome, I'm Leonard Sanya")
     
     profile_image = Image.open('images/img2.jpeg')
-    st.image(profile_image, caption='Leonard Sanya', width=100)  # Adjust the width as needed
+    st.image(profile_image, caption='Leonard Sanya', width=400)  # Adjust the width as needed
 
     st.markdown("""
     ### Hi, I'm [Leonard Sanya]!
