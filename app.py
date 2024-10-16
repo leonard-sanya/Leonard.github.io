@@ -81,7 +81,7 @@ def contact():
 if "page" not in st.session_state:
     st.session_state.page = "home"
 
-col1, col2, col3, col4,col5, col6= st.columns(4)
+col1, col2, col3, col4,col5, col6= st.columns(6)
 
 with col1:
     if st.button("Home", key="home_button"):
