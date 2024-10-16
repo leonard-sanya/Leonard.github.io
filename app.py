@@ -63,7 +63,7 @@ def home():
     )
 
     st.markdown("""
-    ### Hi, I'm [Leonard Sanya]!
+    Junior MLOps Engineer, Machine Learning and AI Enthusiast
     """)
 
 
