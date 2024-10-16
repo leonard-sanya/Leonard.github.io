@@ -63,7 +63,7 @@ def home():
     )
 
     st.markdown("""
-    ### Junior MLOps Engineer, Machine Learning and AI Enthusiast
+    ## Junior MLOps Engineer, ML and AI Enthusiast
     """)
 
 
