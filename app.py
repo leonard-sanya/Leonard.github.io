@@ -40,6 +40,7 @@ def bio():
     
     """)
 def cv():
+    set_background('images/img.png') 
     st.title("Curriculum Vitae")
     with st.expander("📁 Education"):
         st.markdown("Here are some of my recent works:")
