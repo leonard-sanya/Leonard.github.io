@@ -26,7 +26,22 @@ def home():
     st.title("Welcome, I'm Leonard Sanya")
     
     profile_image = Image.open('images/img2.jpeg')
-    st.image(profile_image, caption='Leonard Sanya', width=400)  # Adjust the width as needed
+    # Display the image with rounded corners using CSS
+    st.markdown(
+        f"""
+        <style>
+            .profile-image {{
+                border-radius: 50%; /* Circle shape */
+                width: 100px; /* Adjust width */
+                height: 100px; /* Adjust height */
+                object-fit: cover; /* Cover the image */
+            }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    st.markdown(f'<img class="profile-image" src="data:image/jpeg;base64,{base64.b64encode(profile_image.tobytes()).decode()}" alt="Leonard Sanya">', unsafe_allow_html=True)
 
     st.markdown("""
     ### Hi, I'm [Leonard Sanya]!
