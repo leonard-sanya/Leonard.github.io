@@ -30,22 +30,21 @@ def home():
 
     st.markdown("""
     ### Hi, I'm [Leonard Sanya]!
-    
     """)
 
 def bio():  
     st.title("Bio")
     st.markdown("""
     ### Hi, I'm [Leonard Sanya]!
-    
     """)
+
 def cv():
     set_background('images/cv_background.png') 
     st.title("Curriculum Vitae")
     with st.expander("📁 Education"):
         st.markdown("Here are some of my recent works:")
         
-        #1
+        # Education details
         st.subheader("February 2024 - July 2025 : AIMS - Senegal")
         st.markdown("""
         - Foundations to Machine Learning,
@@ -53,10 +52,8 @@ def cv():
         - Kernel Methods for Machine Learning, 
         - Optimization
         - Machine Learning Operations
-        
         """)
-        #2
-        st.subheader(" August 2022 - June 2023 : AIMS - Cameroon")
+        st.subheader("August 2022 - June 2023 : AIMS - Cameroon")
         st.markdown(""" 
         - Statistical Inference
         - High Dimension Data
@@ -69,19 +66,13 @@ def cv():
         - Machine Learning Made Easy
         - Big Data 
         - Network Science
-        
         """)
-        #3
-        st.subheader("kibabii University")
+        st.subheader("Kibabii University")
         st.markdown("""
-        
         """)
-        #4
         st.subheader("St Benedicts High School Budalangi")
         st.markdown("""
-        
         """)
-
 
 def projects():
     set_background('images/img.png')
@@ -99,11 +90,11 @@ def projects():
     - **Technologies:** Python, Scikit-Learn, NLTK, Pandas
     - [GitHub Repo](https://github.com/yourusername/imdb-sentiment-analysis)
     """)
+
 def experiences():
-    st.title("experiences")
+    st.title("Experiences")
     st.markdown("""
     ### Hi, I'm [Leonard Sanya]!
-    
     """)
 
 def contact():
@@ -115,31 +106,26 @@ def contact():
     st.write("Email: lsanya@aimsammi.org or leonard.sanya@aims-cameroon.org")
 
 
+# Initialize session state for page navigation
 if "page" not in st.session_state:
     st.session_state.page = "home"
 
-col1, col2, col3, col4,col5, col6= st.columns(6)
-
-with col1:
-    if st.button("Home", key="home_button"):
+# Sidebar for navigation buttons
+with st.sidebar:
+    if st.button("Home"):
         st.session_state.page = "home"
-with col2:
-    if st.button("Bio", key="bio_button"):
+    if st.button("Bio"):
         st.session_state.page = "bio"
-with col3:
-    if st.button("CV", key="cv_button"):
+    if st.button("CV"):
         st.session_state.page = "cv"
-with col4:
-    if st.button("Projects", key="project_button"):
-        st.session_state.page = "project"
-with col5:
-    if st.button("Experiences", key="experiences_button"):
+    if st.button("Projects"):
+        st.session_state.page = "projects"
+    if st.button("Experiences"):
         st.session_state.page = "experiences"
-with col6:
-    if st.button("Contacts", key="contacts_button"):
+    if st.button("Contact"):
         st.session_state.page = "contact"
 
-
+# Display the selected page
 if st.session_state.page == "home":
     home()
 elif st.session_state.page == "projects":
@@ -148,7 +134,7 @@ elif st.session_state.page == "skills":
     skills()
 elif st.session_state.page == "contact":
     contact()
-if st.session_state.page == "cv":
+elif st.session_state.page == "cv":
     cv()
 elif st.session_state.page == "experiences":
     experiences()
