@@ -40,7 +40,7 @@ def bio():
     
     """)
 def cv():
-    set_background('/Users/leonard/Desktop/Repositories/Leonard.github.io/images/cv_background.png') 
+    set_background('images/cv_background.png') 
     st.title("Curriculum Vitae")
     with st.expander("📁 Education"):
         st.markdown("Here are some of my recent works:")
