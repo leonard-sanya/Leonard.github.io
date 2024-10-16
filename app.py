@@ -54,6 +54,7 @@ def projects():
     """)
 
 def skills():
+    set_background('images/img.png')
     st.title("Skills")
     st.markdown("""
     - Programming: Python, JavaScript, HTML, CSS
