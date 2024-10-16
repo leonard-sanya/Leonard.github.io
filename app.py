@@ -2,13 +2,11 @@ import streamlit as st
 from PIL import Image
 import base64
 
-# Function to add a background image with custom CSS
+
 def set_background(image_path):
-    # Read the image file and encode it in base64
     with open(image_path, "rb") as image_file:
         encoded_image = base64.b64encode(image_file.read()).decode()
     
-    # Inject custom CSS into the Streamlit app
     st.markdown(
          f"""
          <style>
@@ -24,12 +22,9 @@ def set_background(image_path):
      )
 
 def home():
-    # Set background image for the home page
-    set_background('images/img.png')  # Adjust to the path of your background image
-
+    set_background('images/img.png')  
     st.title("Welcome to My Portfolio!")
     
-    # Display profile image
     profile_image = Image.open('images/img2.jpeg')
     st.image(profile_image, caption='Leonard Sanya')
 
@@ -42,7 +37,6 @@ def home():
     - 💬 Let's connect!
     """)
 
-# Other sections (Projects, Skills, Contact)
 def projects():
     st.title("Projects")
     st.markdown("Here are some of my recent works:")
@@ -68,17 +62,17 @@ def skills():
     """)
 
 def contact():
+    set_background('images/img.png') 
     st.title("Contact")
     st.markdown("Feel free to reach out to me:")
     st.write("[LinkedIn](https://www.linkedin.com/in/leonard-sanya-bb9550255/)")
     st.write("[GitHub](https://github.com/leonard-sanya)")
     st.write("Email: lsanya@aimsammi.org or leonard.sanya@aims-cameroon.org")
 
-# Initialize session state
+
 if "page" not in st.session_state:
     st.session_state.page = "home"
 
-# Create buttons for navigation, each with a unique `key`
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
@@ -94,7 +88,6 @@ with col4:
     if st.button("Contact", key="contact_button"):
         st.session_state.page = "contact"
 
-# Display the selected page
 if st.session_state.page == "home":
     home()
 elif st.session_state.page == "projects":
