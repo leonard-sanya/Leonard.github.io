@@ -27,7 +27,7 @@ def set_background(image_path):
      )
 
 def home():
-    set_background('images/cv_background.png')  
+    set_background('images/home_background.png')  
     st.title("Welcome, I'm Leonard Sanya")
     
     profile_image = Image.open('images/img2.jpeg')
