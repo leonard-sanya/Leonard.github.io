@@ -51,7 +51,7 @@ def cv():
         st.markdown("Here are some of my recent works:")
         
         #1
-        st.subheader("African Institute for Mathematical Sciences (AIMS - SENEGAL)")
+        st.subheader("February 2024 - July 2025 : AIMS - Senegal")
         st.markdown("""
         - Foundations to Machine Learning,
         - Computer Vision, 
@@ -61,8 +61,8 @@ def cv():
         
         """)
         #2
-        st.subheader("African Institute for Mathematical Sciences (AIMS - CAMEROON)")
-        st.markdown("""
+        st.subheader(" August 2022 - June 2023 : AIMS - Cameroon")
+        st.markdown(""" 
         - Statistical Inference
         - High Dimension Data
         - Machine Learning
