@@ -40,13 +40,7 @@ def bio():
     
     """)
 def cv():
-    st.title("CV")
-    st.markdown("""
-    ### Hi, I'm [Leonard Sanya]!
-    
-    """)
-
-        # Projects Section (Collapsible)
+    st.title("Curriculum Vitae")
     with st.expander("📁 Education"):
         st.markdown("Here are some of my recent works:")
         
