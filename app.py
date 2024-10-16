@@ -30,11 +30,20 @@ def home():
 
     st.markdown("""
     ### Hi, I'm [Leonard Sanya]!
-    I'm a passionate Data Scientist and Software Developer with experience in building machine learning models, web applications, and more.
+    
+    """)
 
-    - 💼 Check out my projects below.
-    - 🌱 I’m currently learning about new AI technologies.
-    - 💬 Let's connect!
+def bio():  
+    st.title("Bio")
+    st.markdown("""
+    ### Hi, I'm [Leonard Sanya]!
+    
+    """)
+def cv():
+    st.title("CV")
+    st.markdown("""
+    ### Hi, I'm [Leonard Sanya]!
+    
     """)
 
 def projects():
@@ -53,14 +62,11 @@ def projects():
     - **Technologies:** Python, Scikit-Learn, NLTK, Pandas
     - [GitHub Repo](https://github.com/yourusername/imdb-sentiment-analysis)
     """)
-
-def skills():
-    set_background('images/img.png')
-    st.title("Skills")
+def experiences():
+    st.title("experiences")
     st.markdown("""
-    - Programming: Python, JavaScript, HTML, CSS
-    - Data Science: Machine Learning, NLP, Data Visualization
-    - Tools: Git, Docker, Streamlit, TensorFlow, Scikit-learn
+    ### Hi, I'm [Leonard Sanya]!
+    
     """)
 
 def contact():
@@ -75,20 +81,27 @@ def contact():
 if "page" not in st.session_state:
     st.session_state.page = "home"
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4,col5, col6= st.columns(4)
 
 with col1:
     if st.button("Home", key="home_button"):
         st.session_state.page = "home"
 with col2:
-    if st.button("Projects", key="projects_button"):
-        st.session_state.page = "projects"
+    if st.button("Bio", key="bio_button"):
+        st.session_state.page = "bio"
 with col3:
-    if st.button("Skills", key="skills_button"):
-        st.session_state.page = "skills"
+    if st.button("CV", key="cv_button"):
+        st.session_state.page = "cv"
 with col4:
-    if st.button("Contact", key="contact_button"):
+    if st.button("Projects", key="project_button"):
+        st.session_state.page = "project"
+with col5:
+    if st.button("Experiences", key="experiences_button"):
+        st.session_state.page = "experiences"
+with col6:
+    if st.button("Contacts", key="contacts_button"):
         st.session_state.page = "contact"
+
 
 if st.session_state.page == "home":
     home()
@@ -98,3 +111,9 @@ elif st.session_state.page == "skills":
     skills()
 elif st.session_state.page == "contact":
     contact()
+if st.session_state.page == "cv":
+    cv()
+elif st.session_state.page == "experiences":
+    experiences()
+elif st.session_state.page == "bio":
+    bio()
