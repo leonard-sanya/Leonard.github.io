@@ -38,6 +38,7 @@ def home():
     """)
 
 def projects():
+    set_background('images/img.png')
     st.title("Projects")
     st.markdown("Here are some of my recent works:")
     st.subheader("🏠 House Price Prediction")
