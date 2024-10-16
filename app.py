@@ -43,7 +43,7 @@ def home():
             .profile-image {{
                 border-radius: 50%; /* Circle shape */
                 width: 300px; /* Adjust width */
-                height: 100px; /* Adjust height */
+                height: 300px; /* Adjust height */
                 object-fit: cover; /* Cover the image */
             }}
         </style>
