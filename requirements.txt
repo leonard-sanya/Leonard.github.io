@@ -1,0 +1,6 @@
+streamlit
+Pillow
+watchdog
+
+
+# streamlit run /Users/leonard/Desktop/Repositories/Leonard.github.io/app.py
