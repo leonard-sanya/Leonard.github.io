@@ -46,6 +46,32 @@ def cv():
     
     """)
 
+        # Projects Section (Collapsible)
+    with st.expander("📁 Education"):
+        st.markdown("Here are some of my recent works:")
+        
+        #1
+        st.subheader("AIMS SENEGAL")
+        st.markdown("""
+        
+        """)
+        #2
+        st.subheader("AIMS CAMEROON")
+        st.markdown("""
+        
+        """)
+        #3
+        st.subheader("kibabii University")
+        st.markdown("""
+        
+        """)
+        #4
+        st.subheader("St Benedicts High School Budalangi")
+        st.markdown("""
+        
+        """)
+
+
 def projects():
     set_background('images/img.png')
     st.title("Projects")
