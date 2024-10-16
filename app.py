@@ -3,6 +3,10 @@ from PIL import Image
 import base64
 
 
+import streamlit as st
+from PIL import Image
+import base64
+
 def set_background(image_path):
     with open(image_path, "rb") as image_file:
         encoded_image = base64.b64encode(image_file.read()).decode()
@@ -26,10 +30,15 @@ def home():
     st.title("Welcome, I'm Leonard Sanya")
     
     profile_image = Image.open('images/img2.jpeg')
+
     # Display the image with rounded corners using CSS
     st.markdown(
         f"""
         <style>
+            .profile-container {{
+                display: flex;
+                align-items: flex-start; /* Aligns items at the start */
+            }}
             .profile-image {{
                 border-radius: 50%; /* Circle shape */
                 width: 100px; /* Adjust width */
@@ -41,11 +50,21 @@ def home():
         unsafe_allow_html=True
     )
     
-    st.markdown(f'<img class="profile-image" src="data:image/jpeg;base64,{base64.b64encode(profile_image.tobytes()).decode()}" alt="Leonard Sanya">', unsafe_allow_html=True)
+    # Convert the image to a base64 string
+    buffered = BytesIO()
+    profile_image.save(buffered, format="JPEG")
+    img_str = base64.b64encode(buffered.getvalue()).decode()
+
+    # Create a container for the profile image
+    st.markdown(
+        f'<div class="profile-container"><img class="profile-image" src="data:image/jpeg;base64,{img_str}" alt="Leonard Sanya"></div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("""
     ### Hi, I'm [Leonard Sanya]!
     """)
+
 
 def bio():  
     st.title("Bio")
