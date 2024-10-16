@@ -51,13 +51,29 @@ def cv():
         st.markdown("Here are some of my recent works:")
         
         #1
-        st.subheader("AIMS SENEGAL")
+        st.subheader("African Institute for Mathematical Sciences (AIMS - SENEGAL)")
         st.markdown("""
+        - Foundations to Machine Learning,
+        - Computer Vision, 
+        - Kernel Methods for Machine Learning, 
+        - Optimization
+        - Machine Learning Operations
         
         """)
         #2
-        st.subheader("AIMS CAMEROON")
+        st.subheader("African Institute for Mathematical Sciences (AIMS - CAMEROON)")
         st.markdown("""
+        - Statistical Inference
+        - High Dimension Data
+        - Machine Learning
+        - Data Analysis 
+        - Data Science
+        - Natural Language Processing
+        - Advanced Data Science
+        - Mathematical Modeling for Climate Science 
+        - Machine Learning Made Easy
+        - Big Data 
+        - Network Science
         
         """)
         #3
